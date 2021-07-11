@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin);
+/* :root {
+
+} */
+body {
+  margin: unset;
+  padding: unset;
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #33363d;
+  width: 320px;
+  top: 0;
+  bottom: 0;
+}
+.nav-fixed {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  margin: 20px;
+}
+nav div header {
+  display: flex;
+  color: white;
+}
+nav div header span {
+  color: white;
+  margin: 0 5px;
+}
+nav div a {
+  color: white;
+  margin: 10px;
+  font-size: larger;
+  font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    Verdana, Tahoma, sans-serif;
+  text-decoration: none;
+}
+main {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 10px;
+}
+code {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: large;
+  padding: 20px;
+}
+code p {
+  margin: 0;
+  color: white;
+}
+code p::before {
+  margin-left: 5px;
+  content: "<";
+}
+code p::after {
+  margin-right: 5px;
+  content: ">";
+}
+
+section {
+  background-color: white;
+  padding: 30px;
+  /* margin: 3em; */
+}
+section h3 {
+  margin: 10px;
+}
+
+section > p {
+  margin: 10px;
+  text-align: justify;
+  color: #34383a;
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+section li {
+  margin: 10px;
+  font-weight: bolder;
+  color: #34383a;
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+.description-list {
+  font-weight: 300;
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+.main-section p {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}

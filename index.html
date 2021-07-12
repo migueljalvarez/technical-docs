@@ -13,11 +13,12 @@
   <nav id="navbar">
     <div class="nav-fixed">
       <header><span> <i class="fab fa-git-alt"></i></span>Git</header>
-      <a href="#Introduccion" class="nav-link">Introducción</a>
-      <a href="#Configuracion" class="nav-link">Configuración</a>
-      <a href="#Flujo_de_Trabajo" class="nav-link">Flujo de Trabajo</a>
-      <a href="#Comandos_Git" class="nav-link">Comandos Git</a>
-      <a href="#Referencias" class="nav-link">Referencia</a>
+      <a href="#Introduccion" class="nav-link"> <span> <i class="fas fa-home"></i></span>Introducción</a>
+      <a href="#Configuracion" class="nav-link"> <span> <i class="fas fa-tools"></i></span>Configuración</a>
+      <a href="#Flujo_de_Trabajo" class="nav-link"> <span> <i class="fas fa-code-branch"></i></span> Flujo de
+        Trabajo</a>
+      <a href="#Comandos_Git" class="nav-link"> <span> <i class="fas fa-terminal"></i></span> Comandos Git</a>
+      <a href="#Referencias" class="nav-link"><span> <i class="fas fa-book"></i></span> Referencia</a>
     </div>
   </nav>
   <main id="main-doc">
@@ -31,8 +32,34 @@
       </p>
     </section>
     <!-- Configuracion -->
-    <section class="main-section">
+    <section id="Configuracion" class="main-section">
       <header>Configuración</header>
+      <p>
+        Para configurar Git es necesario conocer algunos aspectos, se puede configurar en los siguientes ambientes:
+      </p>
+      <ul>
+        <li>local</li>
+        <p>
+          Configura Git en la Carpeta Actual.
+        </p>
+        <code>
+          git config --local user.email &lt;"email"&gt;
+        </code>
+        <code>
+          git config --local user.name &lt;"name"&gt;
+        </code>
+        <li>
+          global
+        </li>
+        <p>Configura git de forma global</p>
+        <code>
+          git config --global user.email &lt;"email"&gt;
+        </code>
+        <code>
+          git config --global user.name  &lt;"name"&gt;
+        </code>
+      </ul>
+      <p>Esta Configuración es muy importante para poder realizar un commit.</p>
     </section>
     <!-- Flujo de trabajo -->
     <section id="Flujo_de_Trabajo" class="main-section">
@@ -156,26 +183,26 @@
         <p>
           Impacta en la rama en la que te encuentras parado, los cambios realizados en la rama “nombre_rama”.
         </p>
-        <code>git merge <p>nombre_rama</p></code>
+        <code>git merge &lt;nombre_rama&gt;</code>
         <li>pull</li>
         <p>
           Unifica los comandos fetch y merge en un único comando.
         </p>
-        <code>git pull origin <p>branch</p></code>
+        <code>git pull origin &lt;nombre_rama&gt;</code>
         <li>commit</li>
         <p>
           Confirma los cambios realizados. El “mensaje” generalmente se usa para asociar al commit una breve descripción
           de los cambios realizados.
         </p>
         <code>
-          git commit -m <p>"mensaje"</p>
+          git commit -m  &lt;"mensaje"&gt;
         </code>
         <li>push</li>
         <p>
           Sube la rama “nombre_rama” al servidor remoto.
         </p>
         <code>
-          git push origin <p>nombre_rama</p>
+          git push origin &lt;nombre_rama&gt;
         </code>
         <li>status</li>
         <p>
@@ -187,7 +214,7 @@
           Comienza a trackear el archivo “nombre_archivo”.
         </p>
         <code>
-          git add <p>nombre_archivo</p>
+          git add &lt;nombre_archivo&gt;
         </code>
         <li>checkout</li>
         <p>
@@ -195,14 +222,14 @@
           la rama nueva, por lo que quedas parado en esta última.
         </p>
         <code>
-          git checkout -b <p>nombre_rama_nueva</p>
+          git checkout -b &lt;nombre_rama_nueva&gt;
         </code>
         <p>
           Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una rama local con el
           nombre “nombre_rama” para hacer un seguimiento de la rama remota con el mismo nombre.
         </p>
         <code>
-          git checkout -t origin/<p>nombre_rama</p>
+          git checkout -t origin/&lt;nombre_rama&gt;
         </code>
         <li>branch</li>
         <p>
@@ -221,7 +248,7 @@
           Elimina la rama local con el nombre “nombre_rama”.
         </p>
         <code>
-          git branch -d <p>nombre_rama</p>
+          git branch -d &lt;nombre_rama&gt;
         </code>
         <li>remote</li>
         <p>
@@ -242,7 +269,7 @@
           Elimina los cambios realizados que aún no se hayan hecho commit.
         </p>
         <code>
-          git revert <p>hash_commit</p>
+          git revert &lt;hash_commit&gt;
         </code>
       </ul>
     </section>
